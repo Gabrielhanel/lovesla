@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Agbalumo&family=Carter+One&family=Mitr:wght@200;300;400;500;600;700&family=Passion+One:wght@400;700;900&display=swap');
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 50px;
+    background-color: rgb(23, 23, 120);
+}
+.contador {
+    font-size: 1.10em;
+    font-weight: bold;
+    color: rgb(220, 220, 220);
+    text-align: center;
+    font-family: 'Mitr';
+}
+.gif {
+    padding-top: 230px;
+    width: 40px;
+    z-index: 3;
+    width: 240px;
+    position: absolute;
+}
+.text {
+    font-size: 1em;
+    font-weight: bold;
+    color: rgb(220, 220, 220);
+    text-align: center;
+    font-family: 'Mitr';
+}
+.h3 {
+    color: rgb(220, 220, 220);;
+    text-align: center;
+    font-family: 'Mitr';
+}
+
+.images {
+    border-radius: 10px;
+    box-shadow: 3px 3px 1px;
+    z-index: 0;
+}
+.divimage {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 0;
+    position: relative;
+}
+.line {
+    padding-top: 10px;
+    text-align: center;
+    color: gray;
+}
+

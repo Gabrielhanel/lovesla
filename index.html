@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador de Tempo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="slide-container">
+            <div class="divimage">
+                <img class="gif" src="teste3.gif" alt="">
+                <img class="images" src="https://placehold.co/360x400" alt=""></div>
+    <h3 class="h3">Juntos</h3>
+    <div class="contador" id="contador">Carregando contador...</div>
+    <p class="line">____________________</p>
+    <p class="text">Para você se lembrar de quantos dias se passaram da minha melhor decisão… E que a gente possa voltar aqui e ver que os dias só aumentaram… Eu te amo eternamente meu amor ❤️</p>
+
+    <script>
+        // Data inicial (alterar para a data desejada)
+        const dataInicial = new Date("2024-10-03T00:00:00"); // Exemplo: 1º de junho de 2014
+
+        function atualizarContador() {
+            const agora = new Date();
+            const tempoDiferenca = agora - dataInicial;
+
+            // Calcular anos, meses, dias, horas, minutos e segundos
+            const anos = Math.floor(tempoDiferenca / (365.25 * 24 * 60 * 60 * 1000));
+            const meses = Math.floor((tempoDiferenca % (365.25 * 24 * 60 * 60 * 1000)) / (30 * 24 * 60 * 60 * 1000));
+            const dias = Math.floor((tempoDiferenca % (30 * 24 * 60 * 60 * 1000)) / (24 * 60 * 60 * 1000));
+            const horas = Math.floor((tempoDiferenca % (24 * 60 * 60 * 1000)) / (60 * 60 * 1000));
+            const minutos = Math.floor((tempoDiferenca % (60 * 60 * 1000)) / (60 * 1000));
+            const segundos = Math.floor((tempoDiferenca % (60 * 1000)) / 1000);
+
+            // Exibir o contador na página
+            const textoContador = `${meses} meses, ${dias} dias, ${horas} horas, ${minutos} minutos e ${segundos} segundos.`;
+            document.getElementById("contador").textContent = textoContador;
+        }
+
+        // Atualizar o contador a cada segundo
+        setInterval(atualizarContador, 1000);
+    </script>
+
+</body>
+</html>
